@@ -14,7 +14,7 @@ const App = () => {
       <div>
         <Input
         inputValue={inputValue}
-        onChangeInputValue={this.onChangeInputValue}
+        onChangeInputValue={onChangeInputValue}
         />
       </div>
       <img src={logo} alt={'logo'} />
