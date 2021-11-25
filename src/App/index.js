@@ -1,31 +1,26 @@
-import React, { Component } from 'react'
+import React, { Component, useState } from 'react'
 import Input from '../Input/index'
 import logo from '../resources/logo512.png'
 
-export default class App extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      inputValue: ''
-    }
-  }
+const App = () => {
 
-  onChangeInputValue = (value) =>
-    this.setState({ inputValue: value })
+  const [inputValue, setInputValue] = useState('')
 
-  render() {
-    const { inputValue } = this.state
+  const onChangeInputValue = (value) =>
+    setInputValue(value)
 
-    return (
-      <>
-        <div>
-          <Input
-            inputValue={inputValue}
-            onChangeInputValue={this.onChangeInputValue}
-          />
-        </div>
-        <img src={logo} alt={'logo'} />
-      </>
-    )
-  }
+  return (
+    <>
+      <div>
+        <Input
+        inputValue={inputValue}
+        onChangeInputValue={this.onChangeInputValue}
+        />
+      </div>
+      <img src={logo} alt={'logo'} />
+    </>
+  )
+
 }
+
+export default App;
